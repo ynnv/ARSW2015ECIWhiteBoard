@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app="modone">
+    <head >
+        <script src="js/libs/angular.min.js"></script>
+        <script src="js/libs/angular-route.js"></script>
+        <script src="js/libs/appmodule.js"></script>
+
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <title>Blueprints</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--[if lte IE 8]<script src="assets/js/ie/html5shiv.js"></script>-->
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <!--[if lte IE 8]<link rel="stylesheet" href="assets/css/ie8.css" />-->
+        <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+    </head>
+    <body  ng-controller="plan_control" class="loading">
+
+        <div id="wrapper">
+                <div id="bg"></div>
+                <div id="overlay"></div>
+                <div id="main">
+
+                        <!-- Header -->
+                                <header id="header">
+                                    <h1>ECIWhite Board</h1>
+			            <p>Modeling language  &nbsp;&bull;&nbsp; Development &nbsp;&bull;&nbsp; Visualize the design</p>
+
+                                    <canvas id="canvas" width="800" height="600" style="border:3px solid #000000;">
+
+                                    </canvas>
+                                    <select ng-model="entry.Figura">
+                                        <option  ng-repeat="e in entries" value="{{e}}">
+                                            {{e}}
+                                        </option>
+                                    </select>
+
+                                    <button type="button" class="btn btn-warning"  ng-click="getCanvas()">
+                                        Dibujar
+                                    </button>
+                                    <button type="button" class="btn btn-warning"  ng-click="draw()">
+                                        Dibujar Cuadrados
+                                    </button>
+                                </header>
+
+                        <!-- Footer -->
+                                <footer id="footer">
+                                        <span class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">HTML5 UP</a>.</span>
+                                </footer>
+
+                </div>
+        </div>
+        <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    </body>
+</html>
+
